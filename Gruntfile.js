@@ -41,6 +41,12 @@ module.exports = function (grunt) {
                 src: 'app/**/templates/*.html',
                 dest: 'dist/',
                 expand: true  
+            },
+            app_css: {
+              cwd: './',
+                src: 'app/**/css/*.css',
+                dest: 'dist/',
+                expand: true  
             }
         }
     });
