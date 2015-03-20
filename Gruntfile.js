@@ -5,9 +5,13 @@ module.exports = function (grunt) {
                 sourceMap: true
             },
             dist: {
-                files: {
-                    'dist/app/app.js': 'app/app.js'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'app',
+                    src: ['**/*.js'],
+                    dest: 'dist/app',
+                    ext: '.js'
+                }]
             }
         },
         copy: {
@@ -31,11 +35,17 @@ module.exports = function (grunt) {
                 dest: 'dist/',
                 expand: true,
                 filter: 'isFile'
+            },
+            templates: {
+              cwd: './',
+                src: 'app/**/templates/*.html',
+                dest: 'dist/',
+                expand: true  
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['babel', 'copy', 'copy:css']);
+    grunt.registerTask('default', ['babel', 'copy']);
 };
