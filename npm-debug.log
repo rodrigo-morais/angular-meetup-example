@@ -1,0 +1,159 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-6to5',
+1 verbose cli   'sve-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 warn package.json angular-meetup-example@0.1.0 No README data
+6 warn package.json karma-chrome-launcher@0.1.7 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'grunt-6to5', null ]
+9 verbose cache add name=undefined spec="grunt-6to5" args=["grunt-6to5",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'grunt-6to5',
+10 verbose parsed url   path: 'grunt-6to5',
+10 verbose parsed url   href: 'grunt-6to5' }
+11 verbose cache add [ 'sve-dev', null ]
+12 verbose cache add name=undefined spec="sve-dev" args=["sve-dev",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'sve-dev',
+13 verbose parsed url   path: 'sve-dev',
+13 verbose parsed url   href: 'sve-dev' }
+14 silly lockFile c21d9cc4-grunt-6to5 grunt-6to5
+15 verbose lock grunt-6to5 /home/rodrigo/.npm/c21d9cc4-grunt-6to5.lock
+16 silly lockFile 67db2bd1-sve-dev sve-dev
+17 verbose lock sve-dev /home/rodrigo/.npm/67db2bd1-sve-dev.lock
+18 silly lockFile c21d9cc4-grunt-6to5 grunt-6to5
+19 silly lockFile c21d9cc4-grunt-6to5 grunt-6to5
+20 silly lockFile 67db2bd1-sve-dev sve-dev
+21 silly lockFile 67db2bd1-sve-dev sve-dev
+22 verbose addNamed [ 'grunt-6to5', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 1142ed06-grunt-6to5 grunt-6to5@
+25 verbose lock grunt-6to5@ /home/rodrigo/.npm/1142ed06-grunt-6to5.lock
+26 verbose addNamed [ 'sve-dev', '' ]
+27 verbose addNamed [ null, '*' ]
+28 silly lockFile 0d7a88d2-sve-dev sve-dev@
+29 verbose lock sve-dev@ /home/rodrigo/.npm/0d7a88d2-sve-dev.lock
+30 silly addNameRange { name: 'grunt-6to5', range: '*', hasData: false }
+31 silly addNameRange { name: 'sve-dev', range: '*', hasData: false }
+32 verbose request where is /sve-dev
+33 verbose request registry https://registry.npmjs.org/
+34 verbose request id f8cc06d062367dca
+35 verbose url raw /sve-dev
+36 verbose url resolving [ 'https://registry.npmjs.org/', './sve-dev' ]
+37 verbose url resolved https://registry.npmjs.org/sve-dev
+38 verbose request where is https://registry.npmjs.org/sve-dev
+39 info trying registry request attempt 1 at 15:43:42
+40 http GET https://registry.npmjs.org/sve-dev
+41 verbose request where is /grunt-6to5
+42 verbose request registry https://registry.npmjs.org/
+43 verbose url raw /grunt-6to5
+44 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-6to5' ]
+45 verbose url resolved https://registry.npmjs.org/grunt-6to5
+46 verbose request where is https://registry.npmjs.org/grunt-6to5
+47 info trying registry request attempt 1 at 15:43:42
+48 verbose etag "1NCKYIXLE4KYJZT7J081WU6U2"
+49 http GET https://registry.npmjs.org/grunt-6to5
+50 http 304 https://registry.npmjs.org/grunt-6to5
+51 silly registry.get cb [ 304,
+51 silly registry.get   { date: 'Fri, 20 Mar 2015 18:43:42 GMT',
+51 silly registry.get     server: 'Apache',
+51 silly registry.get     via: '1.1 varnish',
+51 silly registry.get     'last-modified': 'Fri, 20 Mar 2015 18:43:42 GMT',
+51 silly registry.get     'cache-control': 'max-age=60',
+51 silly registry.get     etag: '"1NCKYIXLE4KYJZT7J081WU6U2"',
+51 silly registry.get     age: '11',
+51 silly registry.get     'x-served-by': 'cache-atl6226-ATL',
+51 silly registry.get     'x-cache': 'HIT',
+51 silly registry.get     'x-cache-hits': '1',
+51 silly registry.get     'x-timer': 'S1426877022.593063,VS0,VE1',
+51 silly registry.get     vary: 'Accept',
+51 silly registry.get     'content-length': '0',
+51 silly registry.get     'keep-alive': 'timeout=10, max=50',
+51 silly registry.get     connection: 'Keep-Alive' } ]
+52 verbose etag https://registry.npmjs.org/grunt-6to5 from cache
+53 silly addNameRange number 2 { name: 'grunt-6to5', range: '*', hasData: true }
+54 silly addNameRange versions [ 'grunt-6to5',
+54 silly addNameRange   [ '0.1.0',
+54 silly addNameRange     '0.2.0',
+54 silly addNameRange     '1.0.0',
+54 silly addNameRange     '1.0.1',
+54 silly addNameRange     '1.0.2',
+54 silly addNameRange     '2.0.0',
+54 silly addNameRange     '3.0.0',
+54 silly addNameRange     '3.0.1' ] ]
+55 verbose addNamed [ 'grunt-6to5', '3.0.1' ]
+56 verbose addNamed [ '3.0.1', '3.0.1' ]
+57 silly lockFile e56338b3-grunt-6to5-3-0-1 grunt-6to5@3.0.1
+58 verbose lock grunt-6to5@3.0.1 /home/rodrigo/.npm/e56338b3-grunt-6to5-3-0-1.lock
+59 silly lockFile e56338b3-grunt-6to5-3-0-1 grunt-6to5@3.0.1
+60 silly lockFile e56338b3-grunt-6to5-3-0-1 grunt-6to5@3.0.1
+61 silly lockFile 1142ed06-grunt-6to5 grunt-6to5@
+62 silly lockFile 1142ed06-grunt-6to5 grunt-6to5@
+63 http 404 https://registry.npmjs.org/sve-dev
+64 verbose headers { date: 'Fri, 20 Mar 2015 18:43:42 GMT',
+64 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+64 verbose headers   'content-type': 'application/json',
+64 verbose headers   'cache-control': 'max-age=0',
+64 verbose headers   'content-length': '51',
+64 verbose headers   'accept-ranges': 'bytes',
+64 verbose headers   via: '1.1 varnish',
+64 verbose headers   age: '0',
+64 verbose headers   'x-served-by': 'cache-atl6234-ATL',
+64 verbose headers   'x-cache': 'MISS',
+64 verbose headers   'x-cache-hits': '0',
+64 verbose headers   'x-timer': 'S1426877022.623831,VS0,VE124',
+64 verbose headers   'keep-alive': 'timeout=10, max=50',
+64 verbose headers   connection: 'Keep-Alive' }
+65 silly registry.get cb [ 404,
+65 silly registry.get   { date: 'Fri, 20 Mar 2015 18:43:42 GMT',
+65 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+65 silly registry.get     'content-type': 'application/json',
+65 silly registry.get     'cache-control': 'max-age=0',
+65 silly registry.get     'content-length': '51',
+65 silly registry.get     'accept-ranges': 'bytes',
+65 silly registry.get     via: '1.1 varnish',
+65 silly registry.get     age: '0',
+65 silly registry.get     'x-served-by': 'cache-atl6234-ATL',
+65 silly registry.get     'x-cache': 'MISS',
+65 silly registry.get     'x-cache-hits': '0',
+65 silly registry.get     'x-timer': 'S1426877022.623831,VS0,VE124',
+65 silly registry.get     'keep-alive': 'timeout=10, max=50',
+65 silly registry.get     connection: 'Keep-Alive' } ]
+66 silly lockFile 0d7a88d2-sve-dev sve-dev@
+67 silly lockFile 0d7a88d2-sve-dev sve-dev@
+68 error 404 404 Not Found: sve-dev
+68 error 404
+68 error 404 'sve-dev' is not in the npm registry.
+68 error 404 You should bug the author to publish it
+68 error 404 It was specified as a dependency of 'angular-meetup-example'
+68 error 404
+68 error 404 Note that you can also install from a
+68 error 404 tarball, folder, or http url, or git url.
+69 error System Linux 3.5.0-54-generic
+70 error command "/usr/bin/node" "/usr/bin/npm" "install" "grunt-6to5" "sve-dev"
+71 error cwd /home/rodrigo/Dados/RMMSoftware/Projetos/angular-components/angular-meetup-example
+72 error node -v v0.10.33
+73 error npm -v 1.4.28
+74 error code E404
+75 verbose exit [ 1, true ]

@@ -2,7 +2,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         'babel': {
             options: {
-                sourceMap: true
+                sourceMap: true/*,
+                modules: 'amd'*/
             },
             dist: {
                 files: [{
@@ -37,16 +38,16 @@ module.exports = function (grunt) {
                 filter: 'isFile'
             },
             templates: {
-              cwd: './',
+                cwd: './',
                 src: 'app/**/templates/*.html',
                 dest: 'dist/',
-                expand: true  
+                expand: true
             },
             app_css: {
-              cwd: './',
+                cwd: './',
                 src: 'app/**/css/*.css',
                 dest: 'dist/',
-                expand: true  
+                expand: true
             }
         }
     });

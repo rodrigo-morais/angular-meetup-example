@@ -6,6 +6,7 @@
     height: 8%;
     background-color: #000000;
     color: #FFFFFF;
+    min-height: 40vh;
 }
 
 .header a
