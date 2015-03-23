@@ -1,3 +1,6 @@
+
+import rmHeaderController from "header/controllers/rmHeaderController";
+
 export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
 
         var _requestAuthorization = function() {
@@ -49,7 +52,7 @@ export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
             templateUrl: html,
             css: 'app/header/css/header.css',
             replace: true,
-            controller: 'rmHeaderController',
+            controller: rmHeaderController,
             link: function (scope, element, attrs, controller) {
                 
             }

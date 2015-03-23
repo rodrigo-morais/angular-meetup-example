@@ -1,6 +1,5 @@
 'use strict';
 
-import rmHeaderController from "header/controllers/rmHeaderController";
 import rmHeaderDirective from "header/directives/rmHeaderDirective";
 
 var app = angular.module('myApp', ['rmMeetup','door3.css']);
@@ -15,7 +14,6 @@ app.config(
     ]
 );
 
-app.controller('rmHeaderController', ['$scope', rmHeaderController]);
 app.directive('rmHeader',
     ['$window', 'rmConsumer', 'OauthAccess',rmHeaderDirective]);
 
