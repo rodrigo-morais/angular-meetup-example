@@ -1,11 +1,11 @@
-define(["exports", "module", "header/controllers/rmHeaderController"], function (exports, module, _headerControllersRmHeaderController) {
+define(["exports", "module", "components/header/controllers/rmHeaderController"], function (exports, module, _componentsHeaderControllersRmHeaderController) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
     module.exports = rmHeaderDirective;
 
-    var rmHeaderController = _interopRequire(_headerControllersRmHeaderController);
+    var rmHeaderController = _interopRequire(_componentsHeaderControllersRmHeaderController);
 
     function rmHeaderDirective($window, rmConsumer, OauthAccess) {
 
@@ -45,12 +45,12 @@ define(["exports", "module", "header/controllers/rmHeaderController"], function 
             }
         };
 
-        var html = "app/header/templates/header.html";
+        var html = "app/components/header/templates/header.html";
 
         return {
             restrict: "E",
             templateUrl: html,
-            css: "app/header/css/header.css",
+            css: "app/components/header/css/header.css",
             replace: true,
             controller: rmHeaderController,
             link: function link(scope, element, attrs, controller) {}

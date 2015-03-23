@@ -1,5 +1,5 @@
 
-import rmHeaderController from "header/controllers/rmHeaderController";
+import rmHeaderController from "components/header/controllers/rmHeaderController";
 
 export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
 
@@ -45,12 +45,12 @@ export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
             }
     };
 
-    var html = 'app/header/templates/header.html';
+    var html = 'app/components/header/templates/header.html';
 
     return {
         restrict: 'E',
         templateUrl: html,
-        css: 'app/header/css/header.css',
+        css: 'app/components/header/css/header.css',
         replace: true,
         controller: rmHeaderController,
         link: function (scope, element, attrs, controller) {

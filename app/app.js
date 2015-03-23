@@ -1,6 +1,6 @@
 'use strict';
 
-import rmHeaderDirective from "header/directives/rmHeaderDirective";
+import rmHeaderDirective from "components/header/directives/rmHeaderDirective";
 
 var app = angular.module('myApp', ['rmMeetup','door3.css']);
 

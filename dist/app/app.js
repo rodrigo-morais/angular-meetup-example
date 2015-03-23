@@ -1,9 +1,9 @@
-define(["exports", "header/directives/rmHeaderDirective"], function (exports, _headerDirectivesRmHeaderDirective) {
+define(["exports", "components/header/directives/rmHeaderDirective"], function (exports, _componentsHeaderDirectivesRmHeaderDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
-    var rmHeaderDirective = _interopRequire(_headerDirectivesRmHeaderDirective);
+    var rmHeaderDirective = _interopRequire(_componentsHeaderDirectivesRmHeaderDirective);
 
     var app = angular.module("myApp", ["rmMeetup", "door3.css"]);
 
