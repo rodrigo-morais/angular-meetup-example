@@ -15,6 +15,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        clean: ["dist/"],
         copy: {
             main: {
                 cwd: './',
@@ -62,5 +63,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['babel', 'copy']);
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.registerTask('default', ['clean', 'babel', 'copy']);
 };
