@@ -10,4 +10,4 @@ export default function rmHeaderController($scope){
     $scope.disconnect = function(){
         $scope.logged = false;
     };
-};
+}

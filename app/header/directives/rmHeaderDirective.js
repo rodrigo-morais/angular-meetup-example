@@ -58,4 +58,4 @@ export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
         }
     };
 
-};
+}

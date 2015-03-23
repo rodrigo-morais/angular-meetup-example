@@ -1,5 +1,16 @@
 module.exports = function (grunt) {
     grunt.initConfig({
+        jshint: {
+            options: {
+                strict: false,
+                node: true,
+                esnext: true,
+                globals: {
+                    angular: true
+                }
+            },
+            all: ['app/**/*.js', 'tests/unit/**/*.js']
+        },
         'babel': {
             options: {
                 sourceMap: false,
@@ -58,11 +69,33 @@ module.exports = function (grunt) {
                 dest: 'dist/',
                 expand: true
             }
+        },
+        karma: {
+          unit: {
+            configFile: 'tests/karma.config.js',
+            background: true,
+            singleRun: false,
+            files: [
+              { src: ['test/unit/**/*.js'], served: true }
+            ]
+          }
+        },
+        watch: {
+            files: [
+                'app/**/*.*',
+                'tests/unit/**/*.js'
+            ],
+            tasks: [
+                'jshint', 'clean', 'babel', 'copy'
+            ]
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.registerTask('default', ['clean', 'babel', 'copy']);
+    grunt.registerTask('default', ['jshint', 'clean', 'babel', 'copy']);
 };

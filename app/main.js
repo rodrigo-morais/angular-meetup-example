@@ -8,6 +8,6 @@ require(
         'app'
     ],
     function(){
-        angular.bootstrap(document, ['myApp'])
+        angular.bootstrap(document, ['myApp']);
     }
 );
