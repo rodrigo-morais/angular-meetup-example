@@ -1,19 +1,13 @@
-import promiseFunc from 'app/promise';
+require.config({
+    baseUrl: '/app',
+    urlArgs: 'v=1.0'
+});
 
-let main = (() => {
-    let _run = (number) => {
-        promiseFunc.wait(number).then((success) => {
-            console.log(success);
-            _run(number + 1);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    };
-    return {
-        run: _run
-    };
-})();
-
-//success
-main.run(1);
+require(
+    [
+        'app'
+    ],
+    function(){
+        angular.bootstrap(document, ['myApp'])
+    }
+);
