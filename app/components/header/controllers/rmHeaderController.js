@@ -1,13 +1,17 @@
-export default function rmHeaderController($scope){
+var rmHeaderController = ($scope) => {
     $scope.logged = false;
 
-    $scope.connect = function(token, expiresIn){
-        $scope.$apply(function() {
+    $scope.connect = (token, expiresIn) => {
+        $scope.$apply(() => {
             $scope.logged = true;
         });
     };
 
-    $scope.disconnect = function(){
+    $scope.disconnect = () => {
         $scope.logged = false;
     };
-}
+};
+
+rmHeaderController.$inject = ['$scope'];
+
+export default rmHeaderController;

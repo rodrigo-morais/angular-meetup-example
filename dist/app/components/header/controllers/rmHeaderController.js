@@ -1,9 +1,7 @@
 define(["exports", "module"], function (exports, module) {
     "use strict";
 
-    module.exports = rmHeaderController;
-
-    function rmHeaderController($scope) {
+    var rmHeaderController = function ($scope) {
         $scope.logged = false;
 
         $scope.connect = function (token, expiresIn) {
@@ -15,5 +13,9 @@ define(["exports", "module"], function (exports, module) {
         $scope.disconnect = function () {
             $scope.logged = false;
         };
-    }
+    };
+
+    rmHeaderController.$inject = ["$scope"];
+
+    module.exports = rmHeaderController;
 });
