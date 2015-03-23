@@ -86,7 +86,7 @@ module.exports = function (grunt) {
                 'tests/unit/**/*.js'
             ],
             tasks: [
-                'jshint', 'clean', 'babel', 'copy'
+                'jshint', 'karma', 'clean', 'babel', 'copy'
             ]
         }
     });
@@ -97,5 +97,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.registerTask('default', ['jshint', 'clean', 'babel', 'copy']);
+    grunt.registerTask('default', ['jshint', 'karma', 'clean', 'babel', 'copy']);
 };
