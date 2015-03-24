@@ -1,28 +1,28 @@
 
 import rmHeaderController from "components/header/controllers/rmHeaderController";
 
-export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
-
-    var _requestAuthorization = function() {
-        var width = 500,
+var rmHeaderDirective = ($window, rmConsumer, OauthAccess) => {
+    let _requestAuthorization = () => {
+        let width = 500,
             height = 350,
             top = (screen.height - height)/2,
             left = (screen.width - width)/2;
+
         $window.open(
             rmConsumer.authorize_uri,
             "Meetup",
             ["height=", height, ",width=", width,
              ",top=", top, ",left=", left].join(''));    
-    };
+    };  
 
-    var _isAuthorized = function(){
-        var frag = window.location.hash;
+    let _isAuthorized = () => {
+        let frag = window.location.hash;
         if(frag) {
-            var fp = frag.substring(1).split('&'),
+            let fp = frag.substring(1).split('&'),
                 i = fp.length,
                 params = {},
                 re = /(\S+)=(\S+)/,
-                inject = function(pair) {
+                inject = (pair) => {
                     if(re.test(pair)) {
                         var kv = re.exec(pair).splice(1, 2);
                         params[kv[0]] = kv[1];
@@ -45,7 +45,7 @@ export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
             }
     };
 
-    var html = 'app/components/header/templates/header.html';
+    let html = 'app/components/header/templates/header.html';
 
     return {
         restrict: 'E',
@@ -57,5 +57,8 @@ export default function rmHeaderDirective($window, rmConsumer, OauthAccess) {
             
         }
     };
+};
 
-}
+rmHeaderDirective.$inject = ['$window', 'rmConsumer', 'OauthAccess'];
+
+export default rmHeaderDirective;
