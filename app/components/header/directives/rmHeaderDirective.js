@@ -1,4 +1,3 @@
-
 import rmHeaderController from "components/header/controllers/rmHeaderController";
 
 var rmHeaderDirective = ($window, rmConsumer, OauthAccess) => {

@@ -1,6 +1,7 @@
 'use strict';
 
 import rmHeaderDirective from "components/header/directives/rmHeaderDirective";
+import rmMenuDirective from "components/menu/directives/rmMenuDirective";
 
 var app = angular.module('myApp', ['rmMeetup','door3.css']);
 
@@ -16,5 +17,6 @@ app.config(
 
 app.directive('rmHeader',
     ['$window', 'rmConsumer', 'OauthAccess',rmHeaderDirective]);
+app.directive('rmMenu', [rmMenuDirective]);
 
 return app;

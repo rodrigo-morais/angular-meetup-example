@@ -1,9 +1,11 @@
-define(["exports", "components/header/directives/rmHeaderDirective"], function (exports, _componentsHeaderDirectivesRmHeaderDirective) {
+define(["exports", "components/header/directives/rmHeaderDirective", "components/menu/directives/rmMenuDirective"], function (exports, _componentsHeaderDirectivesRmHeaderDirective, _componentsMenuDirectivesRmMenuDirective) {
     "use strict";
 
     var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
 
     var rmHeaderDirective = _interopRequire(_componentsHeaderDirectivesRmHeaderDirective);
+
+    var rmMenuDirective = _interopRequire(_componentsMenuDirectivesRmMenuDirective);
 
     var app = angular.module("myApp", ["rmMeetup", "door3.css"]);
 
@@ -13,6 +15,7 @@ define(["exports", "components/header/directives/rmHeaderDirective"], function (
     }]);
 
     app.directive("rmHeader", ["$window", "rmConsumer", "OauthAccess", rmHeaderDirective]);
+    app.directive("rmMenu", [rmMenuDirective]);
 
     return app;
 });
