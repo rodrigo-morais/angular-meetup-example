@@ -2,18 +2,18 @@ define(["exports", "module"], function (exports, module) {
     "use strict";
 
     var rmHeaderController = function ($scope, $rootScope) {
-        $scope.logged = false;
+        $rootScope.logged = false;
 
         $scope.connect = function (token, expiresIn) {
             $scope.$apply(function () {
                 $rootScope.token = token;
                 $rootScope.expiresIn = expiresIn;
-                $scope.logged = true;
+                $rootScope.logged = true;
             });
         };
 
         $scope.disconnect = function () {
-            $scope.logged = false;
+            $rootScope.logged = false;
         };
     };
 

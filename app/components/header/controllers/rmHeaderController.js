@@ -1,16 +1,16 @@
 var rmHeaderController = ($scope, $rootScope) => {
-    $scope.logged = false;
+    $rootScope.logged = false;
 
     $scope.connect = (token, expiresIn) => {
         $scope.$apply(() => {
             $rootScope.token = token;
             $rootScope.expiresIn = expiresIn;
-            $scope.logged = true;
+            $rootScope.logged = true;
         });
     };
 
     $scope.disconnect = () => {
-        $scope.logged = false;
+        $rootScope.logged = false;
     };
 };
 
