@@ -19,8 +19,7 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
   app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
     $routeProvider.when("/member", {
       templateUrl: "app/member/templates/member.html",
-      controller: rmMemberController,
-      controllerAs: "vm"
+      controller: rmMemberController
     }).otherwise({
       redirectTo: function redirectTo() {
         var pathname = window.location.pathname;
