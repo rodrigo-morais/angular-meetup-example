@@ -21,10 +21,20 @@ app.config(['$routeProvider', '$locationProvider',
       when('/member', {
         templateUrl: 'templates/member.html',/*
         controller: 'PhoneListCtrl'*/
-      })/*.
+      }).
       otherwise({
-        redirectTo: '/'
-      })*/;
+        redirectTo: function(){
+          var pathname = window.location.pathname;
+          if( pathname.split('access_token').length > 1 &&
+              pathname.split('expires_in').length > 1
+          ) {
+            return pathname;
+          }
+          else{
+            return '/';
+          }
+        }
+      });
 
     $locationProvider.html5Mode({
       enabled: true,

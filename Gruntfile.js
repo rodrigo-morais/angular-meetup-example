@@ -6,7 +6,8 @@ module.exports = function (grunt) {
                 node: true,
                 esnext: true,
                 globals: {
-                    angular: true
+                    angular: true,
+                    window: true
                 }
             },
             all: ['app/**/*.js', 'tests/unit/**/*.js']
