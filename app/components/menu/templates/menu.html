@@ -1,5 +1,18 @@
 <div class="menu" data-ng:if="logged">
+    <div class="title">
+        Features
+    </div>
     <ul>
-        <li><a href="/member">Show Member</a></li>
+        <li
+            data-ng:repeat="menu in menus"
+            data-ng:click="select(menu)"
+        >
+            <a
+                href="{{ menu.link }}"
+                data-ng:class="{'selected': menu.selected}"
+            >
+                {{ menu.text }}
+            </a>
+        </li>
     </ul>
 </div>
