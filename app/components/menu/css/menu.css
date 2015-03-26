@@ -13,8 +13,6 @@
     list-style-type: none;
     width: 100%;
     height: 97%;
-    font-family: 'Arial';
-    color: #8c8e87;
     padding: 0;
     margin: 3% 0;
     position: relative;
@@ -22,14 +20,26 @@
 
 .menu ul li
 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a
+{
     cursor: pointer;
     width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: 'Arial';
+    color: #8c8e87;
+    text-decoration: none;
+    position: relative;
+    float: left;
 }
 
-.menu ul li:hover
+.menu ul li a:hover
 {
     cursor: pointer;
     width: calc(100% - 2px);

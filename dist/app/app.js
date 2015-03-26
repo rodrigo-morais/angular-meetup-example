@@ -16,7 +16,8 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
 
   app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
     $routeProvider.when("/member", {
-      templateUrl: "templates/member.html" }).otherwise({
+      templateUrl: "app/templates/member.html"
+    }).otherwise({
       redirectTo: function redirectTo() {
         var pathname = window.location.pathname;
         if (pathname.split("access_token").length > 1 && pathname.split("expires_in").length > 1) {
@@ -38,5 +39,3 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
 
   return app;
 });
-/*
-controller: 'PhoneListCtrl'*/

@@ -19,8 +19,7 @@ app.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/member', {
-        templateUrl: 'templates/member.html',/*
-        controller: 'PhoneListCtrl'*/
+        templateUrl: 'app/templates/member.html'
       }).
       otherwise({
         redirectTo: function(){
