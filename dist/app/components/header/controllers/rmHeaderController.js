@@ -9,6 +9,8 @@ define(["exports", "module"], function (exports, module) {
                 $rootScope.token = token;
                 $rootScope.expiresIn = expiresIn;
                 $rootScope.logged = true;
+
+                var module = angular.module("myApp");
             });
         };
 

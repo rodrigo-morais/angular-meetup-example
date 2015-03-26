@@ -333,7 +333,12 @@ angular.module('rmMeetup').run(['$templateCache', function($templateCache) {
         };
 
         var _isAuthorized = function(){
-            var frag = window.location.hash;
+            var frag = window.location.pathname;
+            
+            if(frag.split('/').length > 1){
+                frag = '#' + frag.split('/')[1];
+            }
+
             if(frag) {
                 var fp = frag.substring(1).split('&'),
                     i = fp.length,

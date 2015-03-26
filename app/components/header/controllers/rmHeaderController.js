@@ -6,6 +6,8 @@ var rmHeaderController = ($scope, $rootScope) => {
             $rootScope.token = token;
             $rootScope.expiresIn = expiresIn;
             $rootScope.logged = true;
+
+            let module = angular.module('myApp');
         });
     };
 
