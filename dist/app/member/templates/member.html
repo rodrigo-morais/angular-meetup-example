@@ -1,58 +1,42 @@
-<h1>Member</h1>
-<table>
-    <thead>
-        <tr>
-            <th colspan="2" style="text-align: center; border:solid 1px #000000">
-                Member
-            </th>
-        </tr>
-        <tr>
-            <th style="text-align: left; min-width: 100px; border:solid 1px #000000">
-                Field
-            </th>
-            <th style="text-align: left; min-width: 100px; border:solid 1px #000000">
-                Value
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Id</td>
-            <td>{{member.id}}</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>{{member.name}}</td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td>{{ member.country | uppercase }}</td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td>{{member.city}}</td>
-        </tr>
-        <tr>
-            <td>Status</td>
-            <td>{{member.status}}</td>
-        </tr>
-        <tr>
-            <td>Photo</td>
-            <td>
-                <img data-ng:src="{{member.photo.photo_link}}" alt="photo" />
-            </td>
-        </tr>
-        <tr>
-            <td>Link</td>
-            <td>
+<h1 class="member-title">Logged Member</h1>
+<div class="member">
+    <div class="photo">
+        <img data-ng:src="{{member.photo.photo_link}}" alt="photo" />
+    </div>
+    <div class="data">
+        <div>
+            <label class="field">Id</lablel>
+            <span class="value">{{ member.id }}</span>
+        </div>
+        <div>
+            <label class="field">Name</lablel>
+            <span class="value">{{ member.name }}</span>
+        </div>
+        <div>
+            <label class="field">Country</lablel>
+            <span class="value">{{ member.country | uppercase }}</span>
+        </div>
+        <div>
+            <label class="field">City</lablel>
+            <span class="value">{{ member.city }}</span>
+        </div>
+        <div>
+            <label class="field">Status</lablel>
+            <span class="value">{{ member.status }}</span>
+        </div>
+        <div>
+            <label class="field">Meetup Profile</lablel>
+            <a
+                href="{{ member.link }}"
+                class="value"
+                target="_blank"
+            >
                 {{ member.link }}
-            </td>
-        </tr>
-        <tr>
-            <td>Language</td>
-            <td>
-                {{ member.lang }}
-            </td>
-        </tr>
-    </tbody>
-</table>
+            </a>
+        </div>
+        <div>
+            <label class="field">Language</lablel>
+            <span class="value">{{ member.lang }}</span>
+        </div>
+    </div>
+</div>

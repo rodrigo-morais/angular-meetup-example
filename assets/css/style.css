@@ -11,3 +11,62 @@ main
     position: relative;
     float: left;
 }
+
+main .member-title
+{
+    margin-left: 2%;
+}
+
+main .member
+{
+    margin-left: 2%
+}
+
+main .member .photo
+{
+    position: relative;
+    float: left;
+    clear: none;
+    display: inline-block;
+    width: 25%;
+}
+
+main .member .data
+{
+    position: relative;
+    float: left;
+    clear: none;
+    display: inline-block;
+    width: 75%;
+}
+
+main .member .data div
+{
+    position: relative;
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+}
+
+main .member .data div .field
+{
+    position: relative;
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+main .member .data div .value
+{
+    position: relative;
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: normal;
+}
