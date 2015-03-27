@@ -27,7 +27,20 @@ app.config([
       }).
       otherwise({
         redirectTo: function(){
-          let pathname = window.location.pathname;
+          let pathname = '';
+
+          if(window.location.hash === ''){
+            pathname = window.location.pathname;
+          }
+          else{
+            if(window.location.hash.split('#').length > 1){
+              pathname = window.location.hash.split('#')[1];
+            }
+            else{
+              pathname = window.location.hash;
+            }
+          }
+
           if( pathname.split('access_token').length > 1 &&
               pathname.split('expires_in').length > 1
           ) {
@@ -39,10 +52,10 @@ app.config([
         }
       });
 
-    $locationProvider.html5Mode({
+    /*$locationProvider.html5Mode({
       enabled: true,
       requireBase: false
-    });
+    });*/
   }
 ]);
 

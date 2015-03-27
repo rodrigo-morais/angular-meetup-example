@@ -22,7 +22,18 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
       controller: rmMemberController
     }).otherwise({
       redirectTo: function redirectTo() {
-        var pathname = window.location.pathname;
+        var pathname = "";
+
+        if (window.location.hash === "") {
+          pathname = window.location.pathname;
+        } else {
+          if (window.location.hash.split("#").length > 1) {
+            pathname = window.location.hash.split("#")[1];
+          } else {
+            pathname = window.location.hash;
+          }
+        }
+
         if (pathname.split("access_token").length > 1 && pathname.split("expires_in").length > 1) {
           return pathname;
         } else {
@@ -31,10 +42,10 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
       }
     });
 
-    $locationProvider.html5Mode({
+    /*$locationProvider.html5Mode({
       enabled: true,
       requireBase: false
-    });
+    });*/
   }]);
 
   app.directive("rmHeader", ["$window", "rmConsumer", "OauthAccess", rmHeaderDirective]);

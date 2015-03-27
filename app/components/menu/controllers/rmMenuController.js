@@ -2,7 +2,7 @@ var rmMenuController = ($scope) => {
     $scope.menus = [
         {
             text: 'Show Member',
-            link: '/member',
+            link: '/#member',
             selected: false
         }
     ];

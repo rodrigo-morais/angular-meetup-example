@@ -4,7 +4,7 @@ define(["exports", "module"], function (exports, module) {
     var rmMenuController = function ($scope) {
         $scope.menus = [{
             text: "Show Member",
-            link: "/member",
+            link: "/#member",
             selected: false
         }];
 
