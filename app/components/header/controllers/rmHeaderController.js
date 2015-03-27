@@ -1,4 +1,4 @@
-var rmHeaderController = ($scope, $rootScope) => {
+var rmHeaderController = ($scope, $rootScope, $location) => {
     $rootScope.logged = false;
 
     $scope.connect = (token, expiresIn) => {
@@ -13,9 +13,10 @@ var rmHeaderController = ($scope, $rootScope) => {
 
     $scope.disconnect = () => {
         $rootScope.logged = false;
+        $location.path('/');
     };
 };
 
-rmHeaderController.$inject = ['$scope', '$rootScope'];
+rmHeaderController.$inject = ['$scope', '$rootScope', '$location'];
 
 export default rmHeaderController;

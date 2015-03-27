@@ -5,7 +5,7 @@
     </head>
     <body data-ng-cloak>
         <rm-header></rm-header>
-        <main ng-view></main>
+        <main ng-view data-ng:if="logged"></main>
         <rm-menu></rm-menu>
         
         <script src="vendor/angular/angular.js"></script>
