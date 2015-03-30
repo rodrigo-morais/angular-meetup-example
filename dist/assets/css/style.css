@@ -12,26 +12,17 @@ main
     float: left;
 }
 
-main .member-title
+main .internal-title
 {
     margin-left: 2%;
 }
 
-main .member
+main .principal
 {
     margin-left: 2%
 }
 
-main .member .photo
-{
-    position: relative;
-    float: left;
-    clear: none;
-    display: inline-block;
-    width: 25%;
-}
-
-main .member .data
+main .data
 {
     position: relative;
     float: left;
@@ -40,7 +31,7 @@ main .member .data
     width: 75%;
 }
 
-main .member .data div
+main .data div
 {
     position: relative;
     float: left;
@@ -49,7 +40,7 @@ main .member .data div
     width: 100%;
 }
 
-main .member .data div .field
+main .data div .field
 {
     position: relative;
     float: left;
@@ -60,7 +51,7 @@ main .member .data div .field
     font-weight: bold;
 }
 
-main .member .data div .value
+main .data div .value
 {
     position: relative;
     float: left;
@@ -70,3 +61,14 @@ main .member .data div .value
     font-size: 0.9em;
     font-weight: normal;
 }
+
+/**** member style ****/
+main .member .photo
+{
+    position: relative;
+    float: left;
+    clear: none;
+    display: inline-block;
+    width: 25%;
+}
+/**** member style ****/

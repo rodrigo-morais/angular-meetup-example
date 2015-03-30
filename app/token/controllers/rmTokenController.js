@@ -1,7 +1,10 @@
-var rmTokenController = ($scope, $rootScope, rmMeetupMembersService) => {
-    
+var rmTokenController = ($scope, rmMeetupOauthService) => {
+    var oauthAccess = rmMeetupOauthService.getOauthAccess();
+
+    $scope.accessCode = oauthAccess.tokenAccess;
+    $scope.expiresIn = oauthAccess.expiresIn;
 };
 
-rmTokenController.$inject = ['$scope', '$rootScope', 'rmMeetupMembersService'];
+rmTokenController.$inject = ['$scope', 'rmMeetupOauthService'];
 
 export default rmTokenController;

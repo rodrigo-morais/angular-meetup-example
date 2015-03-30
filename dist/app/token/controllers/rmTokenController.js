@@ -1,9 +1,14 @@
 define(["exports", "module"], function (exports, module) {
     "use strict";
 
-    var rmTokenController = function ($scope, $rootScope, rmMeetupMembersService) {};
+    var rmTokenController = function ($scope, rmMeetupOauthService) {
+        var oauthAccess = rmMeetupOauthService.getOauthAccess();
 
-    rmTokenController.$inject = ["$scope", "$rootScope", "rmMeetupMembersService"];
+        $scope.accessCode = oauthAccess.tokenAccess;
+        $scope.expiresIn = oauthAccess.expiresIn;
+    };
+
+    rmTokenController.$inject = ["$scope", "rmMeetupOauthService"];
 
     module.exports = rmTokenController;
 });
