@@ -3,6 +3,7 @@
 import rmHeaderDirective from "components/header/directives/rmHeaderDirective";
 import rmMenuDirective from "components/menu/directives/rmMenuDirective";
 import rmMemberController from "member/controllers/rmMemberController";
+import rmTokenController from "token/controllers/rmTokenController";
 
 let app = angular.module('myApp', ['ngRoute', 'rmMeetup','door3.css']);
 
@@ -24,6 +25,10 @@ app.config([
       when('/member', {
         templateUrl: 'app/member/templates/member.html',
         controller: rmMemberController
+      }).
+      when('/token', {
+        templateUrl: 'app/token/templates/token.html',
+        controller: rmTokenController
       }).
       otherwise({
         redirectTo: function(){

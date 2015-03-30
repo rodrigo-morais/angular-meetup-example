@@ -6,6 +6,10 @@ define(["exports", "module"], function (exports, module) {
             text: "Show Member",
             link: "/#member",
             selected: false
+        }, {
+            text: "Token Data",
+            link: "/#token",
+            selected: false
         }];
 
         $scope.select = function (menu) {

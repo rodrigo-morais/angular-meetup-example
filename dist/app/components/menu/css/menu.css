@@ -41,8 +41,8 @@
     cursor: pointer;
     width: 100%;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 0 0 25%;
+    /*text-align: center;*/
     font-family: 'Arial';
     color: #8c8e87;
     text-decoration: none;
@@ -56,8 +56,8 @@
     cursor: pointer;
     width: calc(100% - 2px);
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 0 0 25%;
+    /*text-align: center;*/
     color: #000000;
     border-left: solid 2px #f5da55;
     background-color: #FFFAF0;

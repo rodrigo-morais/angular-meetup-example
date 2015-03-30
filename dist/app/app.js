@@ -1,4 +1,4 @@
-define(["exports", "components/header/directives/rmHeaderDirective", "components/menu/directives/rmMenuDirective", "member/controllers/rmMemberController"], function (exports, _componentsHeaderDirectivesRmHeaderDirective, _componentsMenuDirectivesRmMenuDirective, _memberControllersRmMemberController) {
+define(["exports", "components/header/directives/rmHeaderDirective", "components/menu/directives/rmMenuDirective", "member/controllers/rmMemberController", "token/controllers/rmTokenController"], function (exports, _componentsHeaderDirectivesRmHeaderDirective, _componentsMenuDirectivesRmMenuDirective, _memberControllersRmMemberController, _tokenControllersRmTokenController) {
   "use strict";
 
   var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -8,6 +8,8 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
   var rmMenuDirective = _interopRequire(_componentsMenuDirectivesRmMenuDirective);
 
   var rmMemberController = _interopRequire(_memberControllersRmMemberController);
+
+  var rmTokenController = _interopRequire(_tokenControllersRmTokenController);
 
   var app = angular.module("myApp", ["ngRoute", "rmMeetup", "door3.css"]);
 
@@ -20,6 +22,9 @@ define(["exports", "components/header/directives/rmHeaderDirective", "components
     $routeProvider.when("/member", {
       templateUrl: "app/member/templates/member.html",
       controller: rmMemberController
+    }).when("/token", {
+      templateUrl: "app/token/templates/token.html",
+      controller: rmTokenController
     }).otherwise({
       redirectTo: function redirectTo() {
         var pathname = "";

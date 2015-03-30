@@ -4,6 +4,11 @@ var rmMenuController = ($scope) => {
             text: 'Show Member',
             link: '/#member',
             selected: false
+        },
+        {
+            text: 'Token Data',
+            link: '/#token',
+            selected: false
         }
     ];
 
