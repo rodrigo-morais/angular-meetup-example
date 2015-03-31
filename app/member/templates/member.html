@@ -1,4 +1,4 @@
-<h1 class="member-title" data-ng:cloak>Logged Member</h1>
+<h1 class="internal-title" data-ng:cloak>Logged Member</h1>
 <div class="principal member" data-ng:cloak>
     <div class="photo">
         <img data-ng:src="{{member.photo.photo_link}}" alt="photo" />
@@ -38,5 +38,21 @@
             <label class="field">Language</lablel>
             <span class="value">{{ member.lang }}</span>
         </div>
+    </div>
+
+    <h2 class="sub-title">Code:</h2>
+    <div class="section-code">
+        <p>Controller code</p>
+        <pre><code>
+var rmMemberController = ($scope, $rootScope, rmMeetupMembersService) => {
+    rmMeetupMembersService.getLoggedMember($rootScope.token).then(function(member){
+        $scope.member = member;
+    });
+};
+
+rmMemberController.$inject = ['$scope', '$rootScope', 'rmMeetupMembersService'];
+
+export default rmMemberController;
+        </code></pre>
     </div>
 </div>
