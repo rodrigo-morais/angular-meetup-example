@@ -11,6 +11,7 @@ main
     display: inline-block;
     position: relative;
     float: left;
+    overflow-y: auto;
 }
 
 main .internal-title
@@ -21,7 +22,6 @@ main .internal-title
 main .principal
 {
     margin-left: 2%;
-    overflow-y: auto;
 }
 
 main .data
@@ -31,6 +31,7 @@ main .data
     clear: none;
     display: inline-block;
     width: 75%;
+    margin-bottom: 2%;
 }
 
 main .data div
@@ -62,6 +63,11 @@ main .data div .value
     width: 100%;
     font-size: 0.9em;
     font-weight: normal;
+}
+
+main .principal .sub-title
+{
+    clear: left;
 }
 
 main .principal .section-code

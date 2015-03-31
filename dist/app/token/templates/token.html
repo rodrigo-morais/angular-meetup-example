@@ -10,4 +10,21 @@
             <span class="value">{{ expiresIn }}</span>
         </div>
     </div>
+
+    <h2 class="sub-title">Code:</h2>
+    <div class="section-code">
+        <p>Controller code</p>
+        <pre><code>
+var rmTokenController = ($scope, rmMeetupOauthService) => {
+    var oauthAccess = rmMeetupOauthService.getOauthAccess();
+
+    $scope.accessCode = oauthAccess.tokenAccess;
+    $scope.expiresIn = oauthAccess.expiresIn;
+};
+
+rmTokenController.$inject = ['$scope', 'rmMeetupOauthService'];
+
+export default rmTokenController;
+        </code></pre>
+    </div>
 </div>
