@@ -30,6 +30,10 @@ app.config([
         templateUrl: 'app/token/templates/token.html',
         controller: rmTokenController
       }).
+      when('/group', {
+        templateUrl: 'app/group/templates/group.html',
+        controller: rmTokenController
+      }).
       otherwise({
         redirectTo: function(){
           let pathname = '';

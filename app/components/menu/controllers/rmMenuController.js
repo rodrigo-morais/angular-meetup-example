@@ -9,6 +9,11 @@ var rmMenuController = ($scope) => {
             text: 'Token Data',
             link: '/#token',
             selected: false
+        },
+        {
+            text: 'Group Data',
+            link: '/#group',
+            selected: false
         }
     ];
 
